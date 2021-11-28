@@ -3,11 +3,11 @@ import React from 'react'; // single quotes are preference
 
 //Step 2 : Create a component function that returns an element
 const Login = () => {
-    const [username, setUsername] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [username, Username] = React.useState('');
+    const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
 
-    const handleSignUp = () => {
+    const handleLogIn = () => {
         console.log('User clicked login', username, password);
         const body = {
             username: username,
@@ -27,7 +27,7 @@ const Login = () => {
         .catch(console.log);
     };
 
-    if(result !== null && result.isSuccess){
+    if(result !== null && result.validUsername){
         return(
             <div>
                 Welcome {username}!
@@ -36,17 +36,17 @@ const Login = () => {
     }
     return (
         <div> 
-            <h1>SignUp</h1>
+            <h1>Login</h1>
             <div>
                 <input value={username} 
-                onChange={e => setUsername(e.target.value)}/>
+                onChange={e => Username(e.target.value)}/>
             </div>
             <div>
                 <input type="password" value={password}
-                onChange={e => setPassword(e.target.value)}/>
+                onChange={e => Password(e.target.value)}/>
             </div>
             <div>
-                <button onClick={handleLogin}>Sign Up</button>
+                <button onClick={handleLogin}>Login</button>
             </div>
             
         </div>
