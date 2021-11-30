@@ -7,7 +7,7 @@ const Login = () => {
     const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
 
-    const handleLogIn = () => {
+    const handleLogin = () => {
         console.log('User clicked login', username, password);
         const body = {
             username: username,
@@ -35,21 +35,23 @@ const Login = () => {
         );
     }
     return (
-        <div> 
-            <h1>Login</h1>
-            <div>
-                <input value={username} 
-                onChange={e => Username(e.target.value)}/>
-            </div>
-            <div>
-                <input type="password" value={password}
-                onChange={e => Password(e.target.value)}/>
+        <form id="loginForm" action=""> 
+            <h1>Login:</h1>
+            <div class="tab">Login to Account
+                <p><input placeholder="username" input type="username" value={username} >
+                    </input>
+                    </p>
+            
+                <p><input placeholder="password" input type="password" value={password} >
+                </input>
+                </p>
             </div>
             <div>
                 <button onClick={handleLogin}>Login</button>
             </div>
             
-        </div>
+        
+        </form>
     );
 };
 

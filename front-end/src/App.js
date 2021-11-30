@@ -9,7 +9,9 @@ import Login from './Login';
 function App() {
   return (
     <div>
-       <ul>
+  <div class="split left">
+  <div class="centered">
+  <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/sign-up">Sign Up</Link></li>
@@ -18,10 +20,15 @@ function App() {
         <Route path="/sign-up" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route path="/">
-          <Home/>
+        <Home/>
         </Route>
       </Switch>
+  </div>
+</div>
+       
     </div>
+
+    
   );
 }
 

@@ -35,23 +35,26 @@ const SignUp = () => {
         );
     }
     return (
-        <div> 
-            <h1>SignUp</h1>
-            <div>
-                <input value={username} 
-                onChange={e => setUsername(e.target.value)}/>
-            </div>
-            <div>
-                <input type="password" value={password}
-                onChange={e => setPassword(e.target.value)}/>
+        <form id="signupForm" action=""> 
+            <h1>Sign Up:</h1>
+            <div class="tab">Create an Account
+                <p><input placeholder="username" input type="username" value={username} onChange={e => setUsername(e.target.value)}>
+                    </input>
+                    </p>
+            
+                <p><input placeholder="password" input type="password" value={password} onChange={e => setPassword(e.target.value)}>
+                </input>
+                </p>
             </div>
             <div>
                 <button onClick={handleSignUp}>Sign Up</button>
             </div>
             
-        </div>
+        
+        </form>
     );
 };
+
 
 //Step 3 
 export default SignUp; //equivallent to "public" in java

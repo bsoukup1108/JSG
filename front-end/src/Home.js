@@ -5,7 +5,7 @@ import React from 'react'; // single quotes are preference
 const Home = () => { 
     return (
         <div> 
-            <h1>Home</h1>
+            <h1>JSG Payments</h1>
         </div>
     );
 };
