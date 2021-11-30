@@ -8,31 +8,49 @@ import Login from './Login';
 
 function App() {
   return (
-    <center>
-  <div>
-  <div>
-  <div>
-  <ul>
     
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/sign-up">Sign Up</Link></li>
-        </ul>
-      <Switch>
-        <Route path="/sign-up" component={SignUp} />
-        <Route path="/login" component={Login} />
-        <Route path="/">
-        <Home/>
-        </Route>
-      </Switch>
-  </div>
-</div>
-       
+    
+    <body>
+
+      <div class="header">
+      <h1>JSG Payments</h1>
+      <p>A payment management site created by JSG.</p>
     </div>
-    </center>
+    
+    <div class="navbar">
+      <ul>
+        <a><li><Link to="/">Home</Link></li></a>
+        <a><li><Link to="/login">Login</Link></li></a>
+        <a><li><Link to="/sign-up">Sign Up</Link></li></a>
+        <a class="right">
+        <li><Link to="/">Transactions</Link></li>
+        </a>
+        </ul>
+      </div>
+
+      <div class="links">
+      <Switch>
+          <Route path="/sign-up" component={SignUp} />
+          <Route path="/login" component={Login} />
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        </div>
+
+      ]
+
+      <div class="footer">
+      <h2>Java Supremacy Gang</h2>
+      </div>
+      
+       <br></br>
+        </body>
+       
+        
 
     
   );
-}
+  }
 
 export default App;
