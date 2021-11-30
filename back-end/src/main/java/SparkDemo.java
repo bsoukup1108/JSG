@@ -17,7 +17,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
-public class SimpleServer {
+public class SparkDemo {
 
   public static void main(String[] args) throws IOException {
 
