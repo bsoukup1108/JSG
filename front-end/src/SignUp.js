@@ -38,11 +38,11 @@ const SignUp = () => {
         <form id="signupForm" action=""> 
             <h1>Sign Up:</h1>
             <div class="tab">Create an Account
-                <p><input placeholder="username" input type="username" value={username} onChange={e => setUsername(e.target.value)}>
+                <p><input placeholder="username" input type="username" value={username} onChange={e =>setUsername(e.target.value)}>
                     </input>
                     </p>
             
-                <p><input placeholder="password" input type="password" value={password} onChange={e => setPassword(e.target.value)}>
+                <p><input placeholder="password" input type="password" value={password} onChange={e =>setPassword(e.target.value)}>
                 </input>
                 </p>
             </div>

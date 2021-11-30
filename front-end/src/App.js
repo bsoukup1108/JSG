@@ -9,8 +9,8 @@ import Login from './Login';
 function App() {
   return (
     <div>
-  <div class="split left">
-  <div class="centered">
+  <div>
+  <div>
   <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/login">Login</Link></li>

@@ -2,6 +2,10 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 import static spark.Spark.*;
 
@@ -36,6 +40,11 @@ public class SparkDemo {
   private static List<UserDto> users = new ArrayList<>();
 
   public static void main(String[] args) {
+     MongoClient mongoClient = new MongoClient("localhost", 27017);
+    System.out.println("Connected to database:");
+    MongoDatabase db = mongoClient.getDatabase("MyDatabase");
+    MongoCollection<Document> myCollection = db.getCollection("Users");
+
     port(1234);
 
     post("/api/sign-up", (req, res) ->{
