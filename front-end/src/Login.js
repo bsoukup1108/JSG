@@ -46,7 +46,7 @@ const Login = () => {
                 onChange={e => Password(e.target.value)}/>
             </div>
             <div>
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogIn}>Login</button>
             </div>
             
         </div>
