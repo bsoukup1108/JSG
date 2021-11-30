@@ -35,6 +35,7 @@ const Login = () => {
         );
     }
     return (
+        <div class="links">
         <form id="loginForm" action=""> 
             <h1>Login:</h1>
             <div class="tab">Login to Account
@@ -52,6 +53,7 @@ const Login = () => {
             
         
         </form>
+        </div>
     );
 };
 

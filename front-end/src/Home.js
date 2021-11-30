@@ -4,10 +4,21 @@ import React from 'react'; // single quotes are preference
 //Step 2 : Create a component function that returns an element
 const Home = () => { 
     return (
-        <div> 
-            <h1>JSG Payments</h1>
-        </div>
-    );
+        
+        <><div>
+            
+
+        </div><div>
+                <h2>What You Can Do</h2>
+                <h5>Create an Account</h5>
+                <h5>Login to an Existing Account</h5>
+                <h5>Make a Transaction</h5>
+                <h5>Look at Public Transactions</h5>
+
+            </div></>
+  
+      
+    )
 };
 
 //Step 3 

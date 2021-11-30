@@ -35,6 +35,8 @@ const SignUp = () => {
         );
     }
     return (
+        <div class="links">
+            
         <form id="signupForm" action=""> 
             <h1>Sign Up:</h1>
             <div class="tab">Create an Account
@@ -52,6 +54,7 @@ const SignUp = () => {
             
         
         </form>
+        </div>
     );
 };
 
