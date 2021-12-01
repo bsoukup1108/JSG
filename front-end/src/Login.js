@@ -39,11 +39,11 @@ const Login = () => {
         <form id="loginForm" action=""> 
             <h1>Login:</h1>
             <div class="tab">Login to Account
-                <p><input placeholder="username" input type="username" value={username} >
+                <p><input placeholder="username" input type="username" value={username} onInput={e => Username(e.target.value)}>
                     </input>
                     </p>
             
-                <p><input placeholder="password" input type="password" value={password} >
+                <p><input placeholder="password" input type="password" value={password} onInput={e => Password(e.target.value)}>
                 </input>
                 </p>
             </div>
