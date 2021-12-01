@@ -1,20 +1,7 @@
 import com.google.gson.Gson;
-
-<<<<<<< HEAD
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-public class SparkDemo {
-=======
 import java.util.ArrayList;
 import java.util.List;
-
 import static spark.Spark.*;
->>>>>>> e03d773108d3f68ab6fb42284f3fe80ff26957cb
 
 class UserDto{
   public String username;
@@ -28,6 +15,16 @@ class SignUpResponseDto{
 
   public SignUpResponseDto(boolean isSuccess, String message) {
     this.isSuccess = isSuccess;
+    this.message = message;
+  }
+}
+
+class LoginResponseDto{
+  public boolean validUsername;
+  public String message;
+
+  public LoginResponseDto(Boolean validUsername, String message){
+    this.validUsername = validUsername;
     this.message = message;
   }
 }
@@ -56,6 +53,23 @@ public class SparkDemo {
       System.out.println("Total Users " + users.size());
       var signupRes = new SignUpResponseDto(true,null);
       return gson.toJson(signupRes); //temporary
+    });
+
+    post("/api/login", (req,res) -> {
+      String body = req.body();
+      System.out.println(body);
+      UserDto userDto = gson.fromJson(body, UserDto.class);
+
+      boolean notValidUsername = users.stream()
+              .anyMatch(u -> u.username.equals(userDto.username));
+
+      if(notValidUsername){
+        var loginRes = new LoginResponseDto(false, "Username does not exist");
+        return gson.toJson((loginRes));
+      }
+
+      var loginRes = new LoginResponseDto(true, "Welcome " + userDto.username);
+      return gson.toJson(loginRes);
     });
   }
 }
