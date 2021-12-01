@@ -1,8 +1,7 @@
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
-import static spark.Spark.port;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 class UserDto{
   public String username;
@@ -16,6 +15,16 @@ class SignUpResponseDto{
 
   public SignUpResponseDto(boolean isSuccess, String message) {
     this.isSuccess = isSuccess;
+    this.message = message;
+  }
+}
+
+class LoginResponseDto{
+  public boolean validUsername;
+  public String message;
+
+  public LoginResponseDto(Boolean validUsername, String message){
+    this.validUsername = validUsername;
     this.message = message;
   }
 }
@@ -44,6 +53,23 @@ public class SparkDemo {
       System.out.println("Total Users " + users.size());
       var signupRes = new SignUpResponseDto(true,null);
       return gson.toJson(signupRes); //temporary
+    });
+
+    post("/api/login", (req,res) -> {
+      String body = req.body();
+      System.out.println(body);
+      UserDto userDto = gson.fromJson(body, UserDto.class);
+
+      boolean notValidUsername = users.stream()
+              .anyMatch(u -> u.username.equals(userDto.username));
+
+      if(notValidUsername){
+        var loginRes = new LoginResponseDto(false, "Username does not exist");
+        return gson.toJson((loginRes));
+      }
+
+      var loginRes = new LoginResponseDto(true, "Welcome " + userDto.username);
+      return gson.toJson(loginRes);
     });
   }
 }
