@@ -3,21 +3,14 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
 
-public class SimpleServer {
+public class SparkDemo {
 
   public static void main(String[] args) throws IOException {
 
