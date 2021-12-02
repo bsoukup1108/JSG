@@ -63,12 +63,11 @@ public class SparkDemo {
       boolean notValidUsername = users.stream()
               .anyMatch(u -> u.username.equals(userDto.username));
 
-      if(notValidUsername){
+      if(!notValidUsername){
         var loginRes = new LoginResponseDto(false, "Username does not exist");
         return gson.toJson((loginRes));
       }
-
-      var loginRes = new LoginResponseDto(true, "Welcome " + userDto.username);
+      var loginRes = new LoginResponseDto(true, null);
       return gson.toJson(loginRes);
     });
   }

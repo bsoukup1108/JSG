@@ -28,6 +28,7 @@ const Login = () => {
     };
 
     if(result !== null && result.validUsername){
+       window.location.href ="/Home.js"
         return(
             <div>
                 Welcome {username}!
@@ -35,25 +36,21 @@ const Login = () => {
         );
     }
     return (
-        <div class="links">
-        <form id="loginForm" action=""> 
-            <h1>Login:</h1>
-            <div class="tab">Login to Account
-                <p><input placeholder="username" input type="username" value={username} onInput={e => Username(e.target.value)}>
-                    </input>
-                    </p>
-            
-                <p><input placeholder="password" input type="password" value={password} onInput={e => Password(e.target.value)}>
-                </input>
-                </p>
+        <div> 
+        <h1>Login</h1>
+        <div>
+        <input value={username} 
+                onChange={e => Username(e.target.value)}/>
+
+        </div>
+        <div>
+                <input type="password" value={password}
+                onChange={e => Password(e.target.value)}/>
             </div>
             <div>
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogin} >Login</button>
             </div>
-            
-        
-        </form>
-        </div>
+    </div>
     );
 };
 
