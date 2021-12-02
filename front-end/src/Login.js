@@ -28,7 +28,7 @@ const Login = () => {
     };
 
     if(result !== null && result.validUsername){
-      //  window.location.href ="/Home.js"
+       window.location.href ="/Home.js"
         return(
             <div>
                 Welcome {username}!
