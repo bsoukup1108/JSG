@@ -22,6 +22,7 @@ function App() {
         <a><li><Link to="/">Home</Link></li></a>
         <a><li><Link to="/login">Login</Link></li></a>
         <a><li><Link to="/sign-up">Sign Up</Link></li></a>
+        <a><li><Link to="makeTransaction">Make Transaction</Link></li></a>
         <a class="right">
         <li><Link to="/">Transactions</Link></li>
         </a>
