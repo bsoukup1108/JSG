@@ -7,10 +7,30 @@ const Transact = () => {
     const [username, Username] = React.useState('');
     const [amount, Amount] = React.useState('');
     const [password, Password] = React.useState('');
+    const [result, setResult] = React.useState(null);
+
 
     const handleTransaction = () => {
-
+        console.log('User clicked login', username, password);
+        const body = {
+            username: username,
+            amount: amount,
+            password: password,
+        };
+        //make an http call to java
+        const settings = {
+            method: 'post',
+            body: JSON.stringify(body),
+        };
+        fetch('/api/Transact', settings) //built in
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+            setResult(data);
+        })
+        .catch(console.log);
     };
+
     return (
         <body>
         <div class="scroll"> 
