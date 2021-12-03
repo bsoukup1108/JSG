@@ -6,7 +6,7 @@ import static spark.Spark.*;
 class UserDto{
   public String username;
   public String password;
-
+  public String amount;
 }
 
 class SignUpResponseDto{
@@ -26,6 +26,15 @@ class LoginResponseDto{
   public LoginResponseDto(Boolean validUsername, String message){
     this.validUsername = validUsername;
     this.message = message;
+  }
+}
+
+class userAmountDto {
+  public String amount;
+
+  public userAmountDto(String amount) {
+    this.amount = amount;
+
   }
 }
 
@@ -81,10 +90,24 @@ public class SparkDemo {
 
       if(!ValidUsername){
         var loginRes = new LoginResponseDto(false, "Username does not exist");
-        return gson.toJson((loginRes));
+        String[] stringArray = body.split("[ { , }: ? = \n ]+");
+        for(int i =0; i < stringArray.length; i++){
+          System.out.println(stringArray[i]);
+        }
+        return stringArray[4];
       }
       var loginRes = new LoginResponseDto(true, null);
+     // System.out.println(parseRequest(body));
+
+      //var amountRes = new userAmountDto()
       return gson.toJson(loginRes);
     });
+  }
+
+  public static String parseRequest(String body){
+    String amount = null;
+    String[] stringArray = body.split("[ ? = \n ]+");
+    String newAmount = stringArray[1];
+    return amount;
   }
 }
