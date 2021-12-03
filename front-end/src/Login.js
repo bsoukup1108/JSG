@@ -4,14 +4,14 @@ import React from 'react'; // single quotes are preference
 //Step 2 : Create a component function that returns an element
 const Login = () => {
     
-    const [username, Username] = React.useState('');
+    const [username1, Username] = React.useState('');
     const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
 
     const handleLogin = () => {
-        console.log('User clicked login', username, password);
+        console.log('User clicked login', username1, password);
         const body = {
-            username: username,
+            username: username1,
             password: password,
         };
         //make an http call to java
@@ -26,13 +26,14 @@ const Login = () => {
             setResult(data);
         })
         .catch(console.log);
+        localStorage.setItem("username1", username1);
     };
 
     if(result !== null && result.validUsername){
        window.location.href ="/Home.js"
         return(
             <div>
-                Welcome {username}!
+                Welcome {username1}!
             </div>
         );
     }
@@ -47,7 +48,7 @@ const Login = () => {
         <div> 
         <h1>Login</h1>
         <div>
-        <input placeholder="username" value={username} 
+        <input placeholder="username" value={username1} 
                 onChange={e => Username(e.target.value)}/>
 
         </div>
