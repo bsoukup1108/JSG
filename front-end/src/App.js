@@ -5,6 +5,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Home from './Home'; //relative Paths
 import SignUp from './SignUp'; 
 import Login from './Login';
+import Transact from './Transact';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <a><li><Link to="/">Home</Link></li></a>
         <a><li><Link to="/login">Login</Link></li></a>
         <a><li><Link to="/sign-up">Sign Up</Link></li></a>
-        <a><li><Link to="makeTransaction">Make Transaction</Link></li></a>
+        <a><li><Link to="/makeTransaction">Make Transaction</Link></li></a>
         <a class="right">
         <li><Link to="/">Transactions</Link></li>
         </a>
@@ -33,6 +34,8 @@ function App() {
       <Switch>
           <Route path="/sign-up" component={SignUp} />
           <Route path="/login" component={Login} />
+          <Route path="/makeTransaction" component={Transact} />
+
           <Route path="/">
             <Home />
           </Route>
