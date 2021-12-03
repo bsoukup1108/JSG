@@ -36,6 +36,7 @@ const SignUp = () => {
         );
     }
     return (
+        <body>
         <div> 
             <h1>SignUp</h1>
             <div>
@@ -52,6 +53,7 @@ const SignUp = () => {
             </div>
             {(result !== null && !result.isSuccess) && <div>{result.message}</div> }
         </div>
+        </body>
     );
 };
 

@@ -4,15 +4,15 @@ import React from 'react'; // single quotes are preference
 //Step 2 : Create a component function that returns an element
 const Transact = () => {
     return (
-        
+        <body>
         <><div>
             
 
         </div><div>
-                <h1>Recent Transactions</h1>
+                <h1>Make A Transaction</h1>
 
             </div></>
-  
+            </body>
       
     )
 }

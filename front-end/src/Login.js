@@ -3,6 +3,7 @@ import React from 'react'; // single quotes are preference
 
 //Step 2 : Create a component function that returns an element
 const Login = () => {
+    
     const [username, Username] = React.useState('');
     const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
@@ -36,6 +37,7 @@ const Login = () => {
         );
     }
     return (
+        <body>
         <div> 
         <h1>Login</h1>
         <div>
@@ -52,8 +54,11 @@ const Login = () => {
                 <button onClick={handleLogin} >Login</button>
             </div>
     </div>
+    </body>
     );
+    
 };
+
 
 //Step 3 
 export default Login; //equivallent to "public" in java
