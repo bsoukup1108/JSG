@@ -105,7 +105,11 @@ list-style: none;
   -ms-text-size-adjust: 30%;
 }
 
-
+.scroll{ 
+  height: 200px;
+  white-space: nowrap; 
+  overflow-y: scroll;
+}
 
 footer.footer {
   position: fixed;

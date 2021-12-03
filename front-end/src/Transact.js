@@ -13,11 +13,11 @@ const Transact = () => {
     };
     return (
         <body>
-        <div> 
+        <div class="scroll"> 
         <h1>Make a Transaction</h1>
         
     
-        <h2>Who Are You Sending This To?</h2>
+        <h4>Who Are You Sending This To?</h4>
         
         <div>
         <input placeholder="username" value={username} 
@@ -25,13 +25,13 @@ const Transact = () => {
 
         </div>
     
-        <h2>Amount</h2>
+        <h4>Amount</h4>
         <div>
                 <input placeholder="amount in dollars" type="amount" value={amount}
                 onChange={e => Amount(e.target.value)}/>
             </div>
             
-            <h2>Your Password to Confirm Transaction</h2>
+            <h4>Your Password to Confirm Transaction</h4>
             <div>
                 <input placeholder="password" type="password" value={password}
                 onChange={e => Password(e.target.value)}/>
