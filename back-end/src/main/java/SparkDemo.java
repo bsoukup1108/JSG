@@ -77,7 +77,13 @@ public class SparkDemo {
         return gson.toJson((loginRes));
       }
       var loginRes = new LoginResponseDto(true, null);
-      return gson.toJson(loginRes);
+      String user = null;
+      String[] stringArray = body.split("[ { , }: ? = \n ]+");
+      for(int i =0; i < stringArray.length; i++){
+        System.out.println(stringArray[i]);
+      }
+      user = stringArray[1];
+      return gson.toJson(user);
     });
 
     post("/api/Transact", (req,res) -> {
@@ -94,7 +100,7 @@ public class SparkDemo {
         for(int i =0; i < stringArray.length; i++){
           System.out.println(stringArray[i]);
         }
-        return stringArray[4];
+        return gson.toJson(stringArray[2] +  " " + stringArray[4]);
       }
       var loginRes = new LoginResponseDto(true, null);
      // System.out.println(parseRequest(body));
