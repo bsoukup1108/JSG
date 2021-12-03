@@ -70,5 +70,21 @@ public class SparkDemo {
       var loginRes = new LoginResponseDto(true, null);
       return gson.toJson(loginRes);
     });
+
+    post("/api/Transact", (req,res) -> {
+      String body = req.body();
+      System.out.println(body);
+      UserDto userDto = gson.fromJson(body, UserDto.class);
+
+      boolean ValidUsername = users.stream()
+              .anyMatch(u -> u.username.equals(userDto.username));
+
+      if(!ValidUsername){
+        var loginRes = new LoginResponseDto(false, "Username does not exist");
+        return gson.toJson((loginRes));
+      }
+      var loginRes = new LoginResponseDto(true, null);
+      return gson.toJson(loginRes);
+    });
   }
 }
