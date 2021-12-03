@@ -1,5 +1,7 @@
 // Step 1 : Import React
 import React from 'react'; // single quotes are preference
+import Home from './Home';
+
 
 //Step 2 : Create a component function that returns an element
 const Transact = () => {
@@ -11,7 +13,7 @@ const Transact = () => {
 
 
     const handleTransaction = () => {
-        console.log('User clicked login', username, password);
+        console.log('User clicked Send Transaction', username, password,amount);
         const body = {
             username: username,
             amount: amount,
@@ -22,10 +24,20 @@ const Transact = () => {
             method: 'post',
             body: JSON.stringify(body),
         };
+
+
         fetch('/api/Transact', settings) //built in
         .then(res => res.json())
         .then(data =>{
             console.log(data)
+            //var data1 = data;
+            console.log("This is the amount " + data);
+            let amount2 = data;
+          //  document.write(amount2);
+          document.getElementById('amount').innerHTML = amount;
+          sessionStorage.setItem("Amount",amount);
+          document.cookie= data
+
             setResult(data);
         })
         .catch(console.log);
@@ -58,8 +70,9 @@ const Transact = () => {
             </div>
             <br></br>
             <div>
-                <button onClick={handleTransaction} >Send Transaction</button>
+                <button onClick={handleTransaction}  >Send Transaction</button>
             </div>
+            <h1>Amount : <span id="amount"></span></h1>
             </div>
     
     </body>
