@@ -13,7 +13,7 @@ const Transact = () => {
 
 
     const handleTransaction = () => {
-        console.log('User clicked Send Transaction', username, password,amount);
+        console.log('User clicked Send Transaction', username, password);
         const body = {
             username: username,
             amount: amount,
@@ -32,15 +32,20 @@ const Transact = () => {
             console.log(data)
             //var data1 = data;
             console.log("This is the amount " + data);
-            let amount2 = data;
+            //let amount2 = data;
           //  document.write(amount2);
-          document.getElementById('amount').innerHTML = amount;
-          sessionStorage.setItem("Amount",amount);
-          document.cookie= data
+         // document.getElementById('amount').innerHTML = amount;
+          //sessionStorage.setItem("Amount",amount);
 
             setResult(data);
         })
         .catch(console.log);
+
+       
+
+        localStorage.setItem("amount", amount);
+        localStorage.setItem("username", username);
+        
     };
 
     return (
@@ -70,7 +75,7 @@ const Transact = () => {
             </div>
             <br></br>
             <div>
-                <button onClick={handleTransaction}  >Send Transaction</button>
+                <button onClick={handleTransaction} method ="POST" >Send Transaction</button>
             </div>
             <h1>Amount : <span id="amount"></span></h1>
             </div>
