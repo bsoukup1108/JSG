@@ -42,7 +42,10 @@
   
   /* Right-aligned link */
   .navbar a.right {
+    list-style: none;
     float: right;
+    display: block;
+
   }
   
   /* Change color on hover */

@@ -39,14 +39,15 @@ const Login = () => {
         <div> 
         <h1>Login</h1>
         <div>
-        <input value={username} 
+        <input placeholder="username" value={username} 
                 onChange={e => Username(e.target.value)}/>
 
         </div>
         <div>
-                <input type="password" value={password}
+                <input placeholder="password" type="password" value={password}
                 onChange={e => Password(e.target.value)}/>
             </div>
+            <br></br>
             <div>
                 <button onClick={handleLogin} >Login</button>
             </div>

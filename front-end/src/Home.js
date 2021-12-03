@@ -5,8 +5,8 @@ import React from 'react'; // single quotes are preference
 const Home = () => { 
     return (
         
-        <><div>
-            
+        <><><div>
+
 
         </div><div>
                 <h2>What You Can Do</h2>
@@ -15,7 +15,12 @@ const Home = () => {
                 <h5>Make a Transaction</h5>
                 <h5>Look at Public Transactions</h5>
 
+            </div></><div>
+                <br></br>
+                <br></br>
+                <h2>Public Transactions</h2>
             </div></>
+            
   
       
     )
