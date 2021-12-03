@@ -1,107 +1,118 @@
-
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+.main{
+  background-color:rgb(181, 210, 236);
+  font-family:'Courier New', Courier, monospace;
+  border-radius: .25rem;
+  box-shadow: 4px 4px 4px black;
+  width: 400px;
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 1em;
+
+}
+
+/* Style the body */
+body{
+  background-color: rgb(51, 50 , 50);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: rgb(51, 50, 50);
+  color: rgb(235, 154, 4);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(34, 33, 33);
   
-  /* Style the body */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  /* Header/logo Title */
-  .header {
-    padding: 80px;
-    text-align: center;
-    background: rgb(51, 50, 50);
-    color: rgb(235, 154, 4);
-  }
-  
-  /* Increase the font size of the heading */
-  .header h1 {
-    font-size: 40px;
-  }
-  
-  /* Style the top navigation bar */
-  .navbar {
-    overflow: hidden;
-    background-color: rgb(34, 33, 33);
-    
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-  list-style: none;
-    float: left;
-    display: block;
-    color: rgb(235, 154, 4);
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  /* Right-aligned link */
-  .navbar a.right {
-    float: right;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: rgb(109, 107, 107);
-    color:black;
-  }
-  
-  .links {
-      display: -ms-flexbox; /* IE10 */
-      display: block;
-      -ms-flex-wrap: wrap; /* IE10 */
-      flex-wrap: wrap;
-      background-color:rgb(51, 50, 50);
-      text-align: center;
-      padding: 20px;
-      color:rgb(235, 154, 4);
-      
-  
-  }
-  
-  /* Column container */
-  .row {  
+}
+
+/* Style the navigation bar links */
+.navbar a {
+list-style: none;
+  float: left;
+  display: block;
+  color: rgb(235, 154, 4);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(109, 107, 107);
+  color:black;
+}
+
+.links {
+    overflow-x: hidden;
     display: -ms-flexbox; /* IE10 */
     display: block;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    background-color: white;
-    
-  }
-  
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-    -ms-flex: 30%; /* IE10 */
-    flex: 30%;
-    background-color: rgb(109, 107, 107);
-    padding: 20px;
-    margin-top: 50%;
-  }
-  
-  /* Main column */
-  .main {   
-    -ms-flex: 70%; /* IE10 */
-    flex: 60%;
-    background-color: rgb(51, 50, 50);
-    padding: 20px;
-    -ms-text-size-adjust: 30%;
-  }
-  
-  
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
+    background-color:rgb(51, 50, 50);
     text-align: center;
-    background: rgb(34, 33, 33);
-    color: rgb(235, 154, 4);
-  }
+    padding: 20px;
+    color:rgb(235, 154, 4);
+    
+
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: block;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  background-color: white;
   
-  
-  
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: rgb(109, 107, 107);
+  padding: 20px;
+  margin-top: 50%;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 60%;
+  background-color: rgb(51, 50, 50);
+  padding: 20px;
+  -ms-text-size-adjust: 30%;
+}
+
+
+
+/* Footer */
+.footer {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background: rgb(34, 33, 33);
+  color: rgb(235, 154, 4);
+}
+

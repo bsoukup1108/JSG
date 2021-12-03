@@ -4,11 +4,11 @@ import React from 'react'; // single quotes are preference
 //Step 2 : Create a component function that returns an element
 const Home = () => { 
     return (
-        
+       <body>
         <><div>
             
 
-        </div><div>
+        </div><div >
                 <h2>What You Can Do</h2>
                 <h5>Create an Account</h5>
                 <h5>Login to an Existing Account</h5>
@@ -17,7 +17,7 @@ const Home = () => {
 
             </div></>
   
-      
+            </body> 
     )
 };
 
