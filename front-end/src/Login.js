@@ -36,6 +36,12 @@ const Login = () => {
             </div>
         );
     }
+    else if(result !== null && result.validUsername == false){
+        window.location.href = "/Home.js"
+        //window.print("Invalid username, please try again")
+        //The above statement actually gets you to print the webpage, please don't use that
+        alert("Invalid username, please try again")
+    }
     return (
         <body>
         <div> 
