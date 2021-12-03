@@ -47,7 +47,14 @@ const Transact = () => {
         localStorage.setItem("username", username);
         
     };
-
+    if(result !== null && result.validUsername){
+        window.location.href ="/Home.js"
+         return(
+             <div>
+                 Your transaction has been completed!
+             </div>
+         );
+     }
     return (
         <body>
         <div class="scroll"> 
