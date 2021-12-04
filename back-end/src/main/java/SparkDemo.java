@@ -107,6 +107,7 @@ public class SparkDemo {
       if(!ValidUsername){
         var loginRes = new LoginResponseDto(false,false, "Username does not exist");
         String[] stringArray = body.split("[ { , }: ? = \n ]+");
+        //Prints out the parsed info in the IntelliJ terminal
         for(int i =0; i < stringArray.length; i++){
           System.out.println(stringArray[i]);
         }
@@ -115,6 +116,7 @@ public class SparkDemo {
         if(!ValidPassword){
           var loginRes = new LoginResponseDto(false,false,"Password is incorrect");
           String[] stringArray = body.split("[ { , }: ? = \n ]+");
+          //Prints out the parsed info in the IntelliJ terminal
           for(int i=0; i < stringArray.length; i++){
             System.out.println(stringArray[i]);
           }
