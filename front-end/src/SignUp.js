@@ -28,7 +28,7 @@ const SignUp = () => {
     };
 
     if(result !== null && result.isSuccess){
-        window.location.href ="/Login.js"
+        window.location.href ="/login"
         return(
             <div>
                 Welcome {username} !

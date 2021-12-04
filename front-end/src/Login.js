@@ -31,7 +31,7 @@ const Login = () => {
     };
 
     if(result !== null && result.validUsername && result.validPassword){
-       window.location.href ="/Home.js"
+       window.location.href ="/"
         return(
             <div>
                 Welcome {username1}!
@@ -39,6 +39,8 @@ const Login = () => {
         );
     }
     else if(result !== null && result.validUsername == false && result.validPassword == false){
+        window.location.href ="/"
+
         //window.location.href = "/Home.js"
         //window.print("Invalid username, please try again")
         //The above statement actually gets you to print the webpage, please don't use that
