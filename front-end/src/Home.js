@@ -29,17 +29,20 @@ const Home = () => {
                 <h5>Login to an Existing Account</h5>
                 <h5>Make a Transaction</h5>
                 <h5>Look at Public Transactions</h5>
-            </div></>
+            </div></><br></br>
   
   <div>
-      <h1>Public Transactions</h1>
+      <h2>Public Transactions</h2>
       <div> 
       
 
-      <h1 class = "box form" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span></h1>
+      <h3 class = "box form" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span></h3>
       
       </div>
+      
   </div>
+  <br></br>
+  <br></br>
             </body> 
     )
 };

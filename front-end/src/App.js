@@ -44,7 +44,7 @@ function App() {
       ]
 
       <footer class="footer">
-      <h2>Java Supremacy Gang</h2>
+      <h3>Java Supremacy Gang</h3>
       </footer>
       
        <br></br>

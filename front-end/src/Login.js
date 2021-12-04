@@ -47,7 +47,7 @@ const Login = () => {
     return (
         <body>
         <div> 
-        <h1>Login</h1>
+        <h2>Login</h2>
         <div>
         <input placeholder="username" value={username1} 
                 onChange={e => Username(e.target.value)}/>

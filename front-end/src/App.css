@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+h2{
+  text-decoration: underline;
+}
 .main{
   background-color:rgb(181, 210, 236);
   font-family:'Courier New', Courier, monospace;
@@ -131,7 +134,7 @@ footer.footer {
 }
 .box{
 
-    background-color:rgb(181, 210, 236);
+    background-color:rgb(109, 107, 107);
     font-family:'Courier New', Courier, monospace;
     border-radius: .25rem;
     box-shadow: 4px 4px 4px black;

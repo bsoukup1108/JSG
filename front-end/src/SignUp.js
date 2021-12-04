@@ -38,7 +38,7 @@ const SignUp = () => {
     return (
         <body>
         <div> 
-            <h1>SignUp</h1>
+            <h2>SignUp</h2>
             <div>
                 <input placeholder="username" value={username} 
                 onChange={e => setUsername(e.target.value)}/>

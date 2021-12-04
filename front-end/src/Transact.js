@@ -59,7 +59,7 @@ const Transact = () => {
     return (
         <body>
         <div> 
-        <h1>Make a Transaction</h1>
+        <h2>Make a Transaction</h2>
         
     
         <h4>Who Are You Sending This To?</h4>
