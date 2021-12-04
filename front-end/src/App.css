@@ -124,6 +124,11 @@ footer.footer {
  
 }
 
+
+.form{
+  max: 600px;
+  margin:0 auto;
+}
 .box{
 
     background-color:rgb(181, 210, 236);
