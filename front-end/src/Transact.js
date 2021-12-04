@@ -39,10 +39,11 @@ const Transact = () => {
 
             setResult(data);
         })
+
         .catch(console.log);
 
-       
-
+        localStorage.setItem("username","Waiting");
+        localStorage.setItem("amount",0);
         localStorage.setItem("amount", amount);
         localStorage.setItem("username", username);
         
