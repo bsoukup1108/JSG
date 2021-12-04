@@ -46,6 +46,7 @@ const Transact = () => {
         localStorage.setItem("amount",0);
         localStorage.setItem("amount", amount);
         localStorage.setItem("username", username);
+        localStorage.setItem("message", message);
         
     };
     if(result !== null && result.validUsername){
