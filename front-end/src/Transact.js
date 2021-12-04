@@ -91,7 +91,7 @@ const Transact = () => {
             </div>
 
             <h4>Message</h4>
-            <input placeholder="send a message" type="message" onChange={e => Message(e.target.value)}/>
+            <input placeholder="send a message" type="message" id = "note" onChange={e => Message(e.target.value)}/>
 
             <h4>Your Password to Confirm Transaction</h4>
             <div>

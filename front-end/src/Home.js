@@ -37,7 +37,6 @@ const Home = () => {
       
 
       <h3 class = "box form" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span></h3>
-      
       </div>
       
   </div>
