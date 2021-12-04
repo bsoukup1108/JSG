@@ -79,10 +79,11 @@ public class SparkDemo {
 
       if(!notValidUsername){
         var loginRes = new LoginResponseDto(false,false, "Username does not exist");
-        return gson.toJson((loginRes));
+        return gson.toJson(loginRes);
       }
       if(!notValidPassword){
         var loginRes = new LoginResponseDto(false, false, "Password is incorrect");
+        return gson.toJson(loginRes);
       }
       var loginRes = new LoginResponseDto(true,true, null);
       String user = null;
@@ -91,7 +92,7 @@ public class SparkDemo {
         System.out.println(stringArray[i]);
       }
       user = stringArray[1];
-      return gson.toJson(user);
+      return gson.toJson(loginRes);
     });
 
     post("/api/Transact", (req,res) -> {
