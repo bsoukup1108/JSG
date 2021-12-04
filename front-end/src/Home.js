@@ -33,13 +33,10 @@ const Home = () => {
   
   <div>
       <h1>Public Transactions</h1>
-      <div class="paid"> 
+      <div> 
       
-      <h1 span id ="username1" > </h1>
-      <h1> paid </h1>
-      <h1>User : <span id="username"> </span> </h1>
 
-      <h1>Amount : $<span id="amount"> </span> </h1>
+      <h1 class = "box" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span></h1>
       
       </div>
   </div>

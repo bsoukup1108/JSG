@@ -124,3 +124,14 @@ footer.footer {
  
 }
 
+.box{
+
+    background-color:rgb(181, 210, 236);
+    font-family:'Courier New', Courier, monospace;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 4px black;
+    border:rgb(235, 154, 4);
+    padding-bottom: 10px;
+    width: 50%;
+
+}
