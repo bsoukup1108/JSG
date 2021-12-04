@@ -110,7 +110,7 @@ public class SparkDemo {
         for(int i =0; i < stringArray.length; i++){
           System.out.println(stringArray[i]);
         }
-        return gson.toJson(stringArray[2] +  " " + stringArray[4]);
+        return gson.toJson(loginRes);
       }
         if(!ValidPassword){
           var loginRes = new LoginResponseDto(false,false,"Password is incorrect");
@@ -118,7 +118,7 @@ public class SparkDemo {
           for(int i=0; i < stringArray.length; i++){
             System.out.println(stringArray[i]);
           }
-          return gson.toJson(stringArray[2]+ " " + stringArray[4]);
+          return gson.toJson(loginRes);
       }
       var loginRes = new LoginResponseDto(true,true, null);
      // System.out.println(parseRequest(body));
