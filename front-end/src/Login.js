@@ -26,6 +26,7 @@ const Login = () => {
             setResult(data);
         })
         .catch(console.log);
+         localStorage.setItem("username1", "waiting");
         localStorage.setItem("username1", username1);
     };
 
