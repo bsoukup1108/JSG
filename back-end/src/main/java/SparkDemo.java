@@ -65,7 +65,9 @@ public class SparkDemo {
     MongoDatabase db = mongoClient.getDatabase("MyDatabase");
     MongoCollection<Document> myCollection = db.getCollection("Users");
 
-    ServerSocket ding;
+    port(1234);
+    //So, in order to actually connect it with a server, we need to utilize the URI or something
+    /*ServerSocket ding;
     Socket dong = null;
     try {
       ding = new ServerSocket(1299);
@@ -79,19 +81,17 @@ public class SparkDemo {
           System.exit(1);
         }
 
-
         InputStream stream = dong.getInputStream();
         BufferedReader in = new BufferedReader(new InputStreamReader(stream));
         String firstLine = null;
         try {
           // read the first line to get the request method, URI and HTTP version
-          String line = in.readLine();
+          String line = in.readLine(); // buffered reader is waiting for an entire line
           firstLine = line;
           System.out.println("----------REQUEST START---------");
           System.out.println(line);
           // read only headers
           line = in.readLine();
-
           while (line != null && line.trim().length() > 0) {
             int index = line.indexOf(": ");
             if (index > 0) {
@@ -117,54 +117,13 @@ public class SparkDemo {
         writer.println("Content-type: text/html");
         writer.println("");
 
-        if (firstLine == null) {
-          writer.println("<h1>404 not found</h1>");
-        } else {
-          System.out.println("First line: " + firstLine);
-          String pathParts = firstLine.split(" ")[1];
-          System.out.println("Full path + query string: " + pathParts);
-
-          String[] parts = pathParts.split("\\?");
-          String path = parts[0];
-          String queryString = parts[1];
-
-          Map<String, String> queryArgs = Arrays.stream(queryString.split("&"))
-                  .map(keyValuesString -> keyValuesString.split("="))
-                  .collect(Collectors.toMap(array -> array[0], array -> array[1]));
-          System.out.println(queryArgs);
-
-          if (path.equals("/createUser")) {
-            String username = queryArgs.get("username");
-            String password = queryArgs.get("password");
-
-            Document potentialUser = myCollection.find(new Document("username", username)).first();
-            if (potentialUser != null) {
-              writer.println("<h1>Username is taken!</h1>");
-            } else {
-              Document newUser = new Document("username", username)
-                      .append("password", password);
-              myCollection.insertOne(newUser);
-              writer.println("<h1>New user created!</h1>");
-            }
-
-          } else if (path.equals("/getUser")) {
-            String username = queryArgs.get("username");
-            String password = queryArgs.get("password");
-
-            Document potentialUser = myCollection.find(new Document("username", username)).first();
-            if (potentialUser == null) {
-              writer.println("<h1>User doesn't exist</h1>");
-            } else {
-              if (potentialUser.getString("password").equals(password)) {
-                writer.println("<h1>Login success!</h1>");
-              } else {
-                writer.println("<h1>Password is incorrect</h1>");
-              }
-            }
-
-          } else {
-            writer.println("<h1>404 not found</h1>");
-          }
+        // Body of our response
+        if(firstLine != null){
+          String url = firstLine.split(" ")[1];
+          writer.println("<h1>Hello, your URL is " + url + "</h1>");
+        }
+        else {
+          writer.println("<h1>Hello World</h1>");
         }
 
         dong.close();
@@ -173,8 +132,7 @@ public class SparkDemo {
       System.out.println("Error opening socket");
       System.exit(1);
     }
-    port(1234);
-
+*/
     post("/api/sign-up", (req,res) -> {
       String body = req.body();
       System.out.println(body);
