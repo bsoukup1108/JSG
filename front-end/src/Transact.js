@@ -57,7 +57,7 @@ const Transact = () => {
      }
     return (
         <body>
-        <div class="scroll"> 
+        <div> 
         <h1>Make a Transaction</h1>
         
     
