@@ -38,8 +38,8 @@ const Home = () => {
       <div> 
       
 
-      <h3 class = "box form" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> Message: <span id="message"> </span></h3>
-      <h1>Message : $<span id="message"> </span> </h1>
+      <h3 class = "box form" ><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> " <span id="message"> </span> "</h3>
+      
       </div>
       
   </div>
