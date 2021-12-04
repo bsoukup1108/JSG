@@ -10,7 +10,7 @@ const Transact = () => {
     const [amount, Amount] = React.useState('');
     const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
-
+    const [message, Message] = React.useState('');
 
     const handleTransaction = () => {
         console.log('User clicked Send Transaction', username, password);
@@ -70,12 +70,29 @@ const Transact = () => {
 
         </div>
     
+        <h4>Payment Type</h4>
+
+        <div class="dropdown">
+            <button class="dropbtn">Select Payment</button>
+            <div class="dropdown-content">
+            <a href="#">Credit</a>
+            <a href="#">Debit</a>
+            <a href="#">Electronic Bank Transfer</a>
+            </div>
+        </div>
+        <br></br><br></br>
+        <input placeholder="card/electronic bank #"/>
+
+        
         <h4>Amount</h4>
         <div>
                 <input placeholder="amount in dollars" type="amount" value={amount}
                 onChange={e => Amount(e.target.value)}/>
             </div>
-            
+
+            <h4>Message</h4>
+            <input placeholder="send a message" type="message" onChange={e => Message(e.target.value)}/>
+
             <h4>Your Password to Confirm Transaction</h4>
             <div>
                 <input placeholder="password" type="password" value={password}
@@ -85,7 +102,7 @@ const Transact = () => {
             <div>
                 <button onClick={handleTransaction} method ="POST" >Send Transaction</button>
             </div>
-            <h1>Amount : <span id="amount"></span></h1>
+            <h2>Amount Sent: <span id="amount"></span></h2>
             </div>
     
     </body>

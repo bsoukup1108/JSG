@@ -10,7 +10,6 @@ window.addEventListener('load', () => {
 
     document.getElementById('amount').innerHTML = amount;
     document.getElementById('username').innerHTML = username;
-
     document.getElementById('username1').innerHTML = username1;
 
 });
