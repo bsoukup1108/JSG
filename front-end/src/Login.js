@@ -29,7 +29,7 @@ const Login = () => {
         localStorage.setItem("username1", username1);
     };
 
-    if(result !== null && result.validUsername){
+    if(result !== null && result.validUsername && result.validPassword){
        window.location.href ="/Home.js"
         return(
             <div>
@@ -37,7 +37,7 @@ const Login = () => {
             </div>
         );
     }
-    else if(result !== null && result.validUsername == false){
+    else if(result !== null && result.validUsername == false && result.validPassword == false){
         window.location.href = "/Home.js"
         //window.print("Invalid username, please try again")
         //The above statement actually gets you to print the webpage, please don't use that

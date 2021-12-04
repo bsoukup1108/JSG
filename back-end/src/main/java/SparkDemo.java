@@ -20,10 +20,12 @@ class SignUpResponseDto{
 }
 
 class LoginResponseDto{
+  public boolean validPassword;
   public boolean validUsername;
   public String message;
 
-  public LoginResponseDto(Boolean validUsername, String message){
+  public LoginResponseDto(Boolean validPassword, Boolean validUsername, String message){
+    this.validPassword = validPassword;
     this.validUsername = validUsername;
     this.message = message;
   }
@@ -72,11 +74,17 @@ public class SparkDemo {
       boolean notValidUsername = users.stream()
               .anyMatch(u -> u.username.equals(userDto.username));
 
+      boolean notValidPassword = users.stream()
+              .anyMatch(p -> p.password.equals(userDto.password));
+
       if(!notValidUsername){
-        var loginRes = new LoginResponseDto(false, "Username does not exist");
+        var loginRes = new LoginResponseDto(false,false, "Username does not exist");
         return gson.toJson((loginRes));
       }
-      var loginRes = new LoginResponseDto(true, null);
+      if(!notValidPassword){
+        var loginRes = new LoginResponseDto(false, false, "Password is incorrect");
+      }
+      var loginRes = new LoginResponseDto(true,true, null);
       String user = null;
       String[] stringArray = body.split("[ { , }: ? = \n ]+");
       for(int i =0; i < stringArray.length; i++){
@@ -93,16 +101,26 @@ public class SparkDemo {
 
       boolean ValidUsername = users.stream()
               .anyMatch(u -> u.username.equals(userDto.username));
+      boolean ValidPassword = users.stream()
+              .anyMatch( p -> p.password.equals(userDto.password));
 
       if(!ValidUsername){
-        var loginRes = new LoginResponseDto(false, "Username does not exist");
+        var loginRes = new LoginResponseDto(false,false, "Username does not exist");
         String[] stringArray = body.split("[ { , }: ? = \n ]+");
         for(int i =0; i < stringArray.length; i++){
           System.out.println(stringArray[i]);
         }
         return gson.toJson(stringArray[2] +  " " + stringArray[4]);
       }
-      var loginRes = new LoginResponseDto(true, null);
+        if(!ValidPassword){
+          var loginRes = new LoginResponseDto(false,false,"Password is incorrect");
+          String[] stringArray = body.split("[ { , }: ? = \n ]+");
+          for(int i=0; i < stringArray.length; i++){
+            System.out.println(stringArray[i]);
+          }
+          return gson.toJson(stringArray[2]+ " " + stringArray[4]);
+      }
+      var loginRes = new LoginResponseDto(true,true, null);
      // System.out.println(parseRequest(body));
 
       //var amountRes = new userAmountDto()
