@@ -61,7 +61,7 @@ public class SparkDemo {
   public static void main(String[] args) {
 
     MongoClient mongoClient = new MongoClient("localhost", 27017);
-    System.out.println("Connected to database:");
+    System.out.println("Connected to database: ");
     MongoDatabase db = mongoClient.getDatabase("MyDatabase");
     MongoCollection<Document> myCollection = db.getCollection("Users");
 
@@ -132,7 +132,7 @@ public class SparkDemo {
       System.out.println("Error opening socket");
       System.exit(1);
     }
-*/
+    */
     post("/api/sign-up", (req,res) -> {
       String body = req.body();
       System.out.println(body);
