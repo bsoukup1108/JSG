@@ -79,7 +79,7 @@ h1, h2, h3, h4{
 
 
 #section02{
-  height: 800px;
+  height: 650px;
 }
 
 
@@ -197,7 +197,7 @@ section h1{
   background-color: rgba(255,255,255,0.13);
   position: absolute;
   transform: translate(-50%,-50%);
-  top: 160%;
+  top: 158%;
   left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(10px);

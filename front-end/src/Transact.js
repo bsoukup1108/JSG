@@ -110,7 +110,7 @@ const Transact = () => {
                 <button onClick={handleTransaction} method ="POST" >Send Transaction</button>
             </div>
             
-            <h2>Amount Sent: <span id="amount"></span></h2>
+            {/* <h2>Amount Sent: <span id="amount"></span></h2> */}
             </div>
             </div>
     
