@@ -144,7 +144,7 @@ footer.footer {
 
 }
 
-.dropbtn {
+/* .dropbtn {
   background-color: rgb(109, 107, 107);
   color: rgb(235, 154, 4);
   padding: 16px;
@@ -152,7 +152,7 @@ footer.footer {
   border: none;
   cursor: pointer;
 }
-.dropdown {
+.payment {
   position: relative;
   display: inline-block;
 }
@@ -173,7 +173,7 @@ footer.footer {
   display: block;
 }
 
-.dropdown-content a:hover {
+.payment:hover {
   background-color: rgb(34, 33, 33)
 }
 
@@ -184,4 +184,7 @@ footer.footer {
 
 .dropdown:hover .dropbtn {
   background-color: rgb(34, 33, 33);
-}
+} */
+
+
+

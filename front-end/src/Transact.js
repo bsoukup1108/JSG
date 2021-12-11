@@ -12,6 +12,7 @@ const Transact = () => {
     const [password, Password] = React.useState('');
     const [result, setResult] = React.useState(null);
     const [message, Message] = React.useState('');
+    const [type, paymentType] = React.useState('');
 
     const handleTransaction = () => {
         console.log('User clicked Send Transaction', username, password);
@@ -48,6 +49,7 @@ const Transact = () => {
         localStorage.setItem("amount", amount);
         localStorage.setItem("username", username);
         localStorage.setItem("message", message);
+        localStorage.setItem("payment", paymentType)
         
     };
     if(result !== null && result.validUsername){
@@ -75,12 +77,15 @@ const Transact = () => {
         <h4>Payment Type</h4>
 
         <div class="dropdown">
-            <button class="dropbtn">Select Payment</button>
+            {/* <button class="dropbtn">Select Payment</button>
             <div class="dropdown-content">
             <a href="#">Credit</a>
             <a href="#">Debit</a>
             <a href="#">Electronic Bank Transfer</a>
-            </div>
+            </div> */}
+        <input placeholder="Credit/Debit/Bank Transfer" value={type} 
+                onChange={e => paymentType(e.target.value)}/>
+
         </div>
         <br></br><br></br>
         <input placeholder="card/electronic bank #"/>
