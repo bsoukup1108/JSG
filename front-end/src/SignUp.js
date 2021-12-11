@@ -1,5 +1,10 @@
 // Step 1 : Import React
 import React from 'react'; // single quotes are preference
+import Login from './Login';
+//import username1 from './Login';
+//import handleLogin from './Login';
+//import Username from './Login';
+//import Password from './Login';
 
 //Step 2 : Create a component function that returns an element
 const SignUp = () => {
@@ -28,15 +33,33 @@ const SignUp = () => {
     };
 
     if(result !== null && result.isSuccess){
-        window.location.href ="/login"
-        return(
-            <div>
-                Welcome {username} !
-            </div>
+        
+        return (
+        <div>
+            
+        </div>
+            //<body>
+           // <div> 
+           // <h2>Login</h2>
+         //   <div>
+          //  <input placeholder="username" value={username1} 
+           //         onChange={e => Username(e.target.value)}/>
+    
+  //          </div>
+    //        <div>
+      //              <input placeholder="password" type="password" value={password}
+        //            onChange={e => Password(e.target.value)}/>
+          //      </div>
+            //    <br></br>
+              //  <div>
+             //       <button onClick={handleLogin} >Login</button>
+             //   </div>
+      ///  </div>
+       /// </body>
         );
     }
     return (
-        <body>
+       <body>
         <div> 
             <h2>SignUp</h2>
             <div>
