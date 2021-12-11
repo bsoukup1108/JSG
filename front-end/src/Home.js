@@ -37,12 +37,20 @@ window.addEventListener('load', () => {
     const username1 = localStorage.getItem('username1')
     const message = localStorage.getItem('message')
 
-
-    document.getElementById('amount').innerHTML = amount;
-    document.getElementById('username').innerHTML = username;
-    document.getElementById('username1').innerHTML = username1;
-    document.getElementById('message').innerHTML = message;
-
+    //These are the sources of the innerHTML error we keep getting
+    //They're coming back as null so we need to find a way to think of these
+    if(document.getElementById('amount').innerHTML != null){
+        document.getElementById('amount').innerHTML = amount;
+    }
+    if(document.getElementById('username').innerHTML != null){
+        document.getElementById('username').innerHTML = username;
+    }
+    if(document.getElementById('username1').innerHTML != null){
+        document.getElementById('username1').innerHTML = username1;
+    }
+    if(document.getElementById('message').innerHTML != null){
+        document.getElementById('message').innerHTML = message;
+    }
 });
 
 
