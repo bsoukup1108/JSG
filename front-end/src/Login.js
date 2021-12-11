@@ -31,7 +31,7 @@ const Login = () => {
     };
 
     if(result !== null && result.validUsername && result.validPassword){
-       window.location.href ="/"
+        window.location.href = "/sign-up"
         return(
             <div>
                 Welcome {username1}!
