@@ -65,7 +65,7 @@ const Transact = () => {
         <div> 
         <h2>Make a Transaction</h2>
         
-    
+        <div class="form2"> 
         <h4>Who Are You Sending This To?</h4>
         
         <div>
@@ -109,7 +109,9 @@ const Transact = () => {
             <div>
                 <button onClick={handleTransaction} method ="POST" >Send Transaction</button>
             </div>
+            
             <h2>Amount Sent: <span id="amount"></span></h2>
+            </div>
             </div>
     
     </body>

@@ -49,19 +49,26 @@ const Login = () => {
     return (
         <body>
         <div> 
-        <h2>Login</h2>
+            
+        <h2>Login Here</h2>
+        <br></br>
+        <div class="form"> 
         <div>
-        <input placeholder="username" value={username1} 
+            <b>Username</b><br></br>
+        <input placeholder="Email or Username" value={username1} 
                 onChange={e => Username(e.target.value)}/>
 
         </div>
+        <br></br>
         <div>
-                <input placeholder="password" type="password" value={password}
+            <b>Password</b><br></br>
+                <input placeholder="Password" type="password" value={password}
                 onChange={e => Password(e.target.value)}/>
             </div>
             <br></br>
             <div>
                 <button onClick={handleLogin} >Login</button>
+            </div>
             </div>
     </div>
     </body>

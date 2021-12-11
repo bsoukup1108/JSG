@@ -9,6 +9,7 @@ body{
   width: 100%;
 }
 
+/*Style headers*/
 h1, h2, h3, h4{
   font: 'Rockwell';
 }
@@ -55,15 +56,16 @@ h1, h2, h3, h4{
   color:black;
 }
 
+/*Style the route*/
 .links {
   overflow-x: hidden;
   display: block;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
+/*Style credit card photo*/
 #section01{
   background-image: url(header.jpeg);
   display:block;
@@ -77,11 +79,11 @@ h1, h2, h3, h4{
 
 
 #section02{
-  height: 650px;
+  height: 800px;
 }
 
 
-
+/*Style footer*/
 footer.footer {
   position: fixed;
   bottom: 0;
@@ -97,7 +99,7 @@ footer.footer {
 
 
 
-section h1 {
+section h1{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,6 +111,8 @@ section h1 {
   text-align: center;
   white-space: nowrap;
 }
+
+
 
 .demo a:hover {
   opacity: .5;
@@ -170,5 +174,34 @@ section h1 {
   width: 2px;
   height: 2px;
   
-  
+}
+
+.form{
+  height: 250px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 140%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+}
+
+.form2{
+  height: 650px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 160%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
 }

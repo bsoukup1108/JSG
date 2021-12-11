@@ -30,6 +30,7 @@ function App() {
           <div class="header">
             <section id="section01" class="demo">
               <h1>JSG PAYMENTS</h1>
+              <h3>A payment managment site created by JSG</h3>
               <a href="#section02" class="scroll"><span> </span></a>
           </section>
           </div>

@@ -61,13 +61,17 @@ const SignUp = () => {
     return (
        <body>
         <div> 
-            <h2>SignUp</h2>
+            <h2>SignUp Here</h2>
+            <div class="form"> 
             <div>
-                <input placeholder="username" value={username} 
+            <b>Username</b><br></br>
+                <input placeholder="Email or Username" value={username} 
                 onChange={e => setUsername(e.target.value)}/>
             </div>
+            <br></br>
             <div>
-                <input placeholder="password" type="password" value={password}
+            <b>Password</b><br></br>
+                <input placeholder="Password" type="password" value={password}
                 onChange={e => setPassword(e.target.value)}/>
             </div>
             <br></br>
@@ -75,6 +79,7 @@ const SignUp = () => {
                 <button onClick={handleSignUp} >Sign Up</button>
             </div>
             {(result !== null && !result.isSuccess) && <div>{result.message}</div> }
+            </div>
         </div>
         </body>
     );
