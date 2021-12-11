@@ -3,6 +3,7 @@ import React from 'react'; // single quotes are preference
 import Home from './Home';
 
 
+
 //Step 2 : Create a component function that returns an element
 const Transact = () => {
 
@@ -53,7 +54,7 @@ const Transact = () => {
         window.location.href ="/Home.js"
          return(
              <div>
-                 Your transaction has been completed!
+                 Your transaction has been completed {username} !
              </div>
          );
      }
@@ -92,7 +93,7 @@ const Transact = () => {
             </div>
 
             <h4>Message</h4>
-            <input placeholder="send a message" type="message" id = "note" onChange={e => Message(e.target.value)}/>
+            <input placeholder="send a message" type="message" onChange={e => Message(e.target.value)}/>
 
             <h4>Your Password to Confirm Transaction</h4>
             <div>
