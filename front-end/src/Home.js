@@ -36,12 +36,14 @@ window.addEventListener('load', () => {
     const username = localStorage.getItem('username')
     const username1 = localStorage.getItem('username1')
     const message = localStorage.getItem('message')
+    const type = localStorage.getItem('type');
 
 
     document.getElementById('amount').innerHTML = amount;
     document.getElementById('username').innerHTML = username;
     document.getElementById('username1').innerHTML = username1;
     document.getElementById('message').innerHTML = message;
+    document.getElementById('type').innerHTML = type;
 
 });
 
@@ -59,7 +61,7 @@ const Home = () => {
             <div>
 
 
-                <h3 class="form"><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> Message: <span id="message"> </span></h3>
+                <h3 class="form"><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> with <span id="type"></span> Message: <span id="message"> </span></h3>
             </div>
 
         </body><br></br><br></br></>
