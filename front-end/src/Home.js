@@ -56,12 +56,13 @@ const Home = () => {
     return (
         <><body>
 
-
+            <br></br><br></br><br></br> <br></br><br></br><br></br>
             <h2>Public Transactions</h2>
+            
             <div>
 
-
-                <h3 class="form"><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> with <span id="type"></span> Message: <span id="message"> </span></h3>
+            
+                <h3 class="form3"><b> <span id="username1"></span></b> paid <span id="username"></span> $<span id="amount"></span> with <span id="type"></span> Message: <span id="message"> </span></h3>
             </div>
 
         </body><br></br><br></br></>
